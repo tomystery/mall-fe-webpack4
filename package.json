@@ -4,10 +4,8 @@
   "description": "mmall前端代码",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server",
-    "dev_win": "./node_modules/.bin/webpack-dev-server",
-    "dist": "WEBPACK_ENV=online ./node_modules/.bin/webpack -p",
-    "dist_win": "set WEBPACK_ENV=online&& ./node_modules/.bin/webpack -p"
+    "dev": "webpack-dev-server --config webpack.dev.config.js",
+    "build": "webpack --config webpack.prod.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +16,8 @@
   "devDependencies": {
     "autoprefixer": "^9.3.1",
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^1.0.0",
     "css-loader": "^0.28.11",
     "ejs": "^2.6.1",
